@@ -1,0 +1,69 @@
+
+
+<div align="center">
+    <table class="table table-bordered">
+        <thead class="table-dark">
+            <tr>
+                <th>Roll No</th>
+                <th>Name</th>
+                <th>Course</th>
+                <th>Fess</th>
+                
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody class="table-light">
+            <tr *ngFor="let d of data ">
+                <td>{{d.rollno}}</td>
+                <td>{{d.name}}</td>
+                
+                <td>{{d.course}}</td>
+                <td>{{d.fees}}</td>
+                
+
+                
+<div class="demo">
+    <google-pay-button
+  environment="TEST"
+  buttonType="buy"
+  buttonColor="black"
+  [paymentRequest]="{
+    apiVersion: 2,
+    apiVersionMinor: 0,
+    allowedPaymentMethods: [
+      {
+        type: 'CARD',
+        parameters: {
+          allowedAuthMethods: ['PAN_ONLY', 'CRYPTOGRAM_3DS'],
+          allowedCardNetworks: ['AMEX', 'VISA', 'MASTERCARD']
+        },
+        tokenizationSpecification: {
+          type: 'PAYMENT_GATEWAY',
+          parameters: {
+            gateway: 'example',
+            gatewayMerchantId: 'exampleGatewayMerchantId'
+          }
+        }
+      }
+    ],
+    merchantInfo: {
+      merchantId: '12345678901234567890',
+      merchantName: 'Demo Merchant'
+    },
+    transactionInfo: {
+      totalPriceStatus: 'FINAL',
+      totalPriceLabel: 'Total',
+      totalPrice: '100.00',
+      currencyCode: 'USD',
+      countryCode: 'US'
+    }
+  }"
+  (loadpaymentdata)="onLoadPaymentData($event)"
+></google-pay-button> </div>
+  
+  
+            </tr>
+        </tbody>
+    </table>
+</div>
+

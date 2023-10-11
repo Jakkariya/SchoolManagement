@@ -1,0 +1,79 @@
+<div class="banner">
+<button class="btn" routerLink="/landing"><i class="fa-solid fa-arrow-left"></i></button>
+
+<h2 style="margin-left: 40%;" class="text-muted">Registration</h2><br><br>
+
+<form #insertform="ngForm" class=" needs-validation" novalidate (ngSubmit)="insertdata(insertform)">  
+
+    <div class="row">
+
+        
+        
+        
+        <div class="col-4"></div>
+        <div class="col-1">
+
+    <label for="validationCustom01" class="form-label"> NAME : </label>
+    </div>
+    <div class="col-2">
+    <input type="text" class="form-control" placeholder="Enter Name"  id="validationCustom01"  required name="name" #name (ngModel)="name" required>
+</div>
+</div>
+<br>
+
+<div class="row">
+    <div class="col-4"></div>
+    <div class="col-1">
+        
+            <label>Enter Age:</label>
+        </div>
+        <div class="col-2">
+            <input type="number" class="form-control" placeholder="enter age" name="age" id="age" #age (ngModel)="age" required>
+            </div></div>
+    <br>
+
+
+
+
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-1">
+    <label>select course:</label>
+</div>
+<div class="col-2">
+<select name="courses"  class="form-control" id="course" name="course" #course (ngModel)="course" required >
+	<option value="java" selected>JAVA</option>
+	<option value="python">PYTHON</option>
+	<option value="web">TESTING</option>
+</select></div></div>
+
+<br>
+    
+<div class="row">
+    <div class="col-4"></div>
+    <div class="col-1">
+    <label>ADDRESS : </label>
+</div>
+<div class="col-2">
+    <input type="text"  class="form-control" id="address" name="address" #address (ngModel)="address">
+</div></div>
+    <br>
+
+    
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-1">
+    <label>CONTACT : </label>
+</div>
+<div class="col-2">
+    <input type="number" class="form-control"  id="contact" name="contact" #contact (ngModel)="contact" required>
+</div></div>
+    <br>
+    <div class="row">
+        <div class="col-5"></div>
+    
+        <div class="col-1">
+    <input type="submit" class="btn btn-info mx-2" value="submit">
+    </div></div>
+  </form>
+</div>

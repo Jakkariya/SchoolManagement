@@ -1,0 +1,14 @@
+<div class="banner">
+
+<div id="container" [formGroup]="form" >
+    <h1>Login</h1>
+
+    <input type="text" formControlName="username" placeholder="Username" id="uid" name="uid" [(ngModel)]="user.uid"/>
+    <input type="text" formControlName="password" placeholder="Password" id="upswd" name="upswd"  [(ngModel)]="user.upswd"/>
+
+    <button (click)="logindata()" >Login</button>
+    
+</div>
+
+
+</div>

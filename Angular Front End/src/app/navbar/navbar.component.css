@@ -1,0 +1,29 @@
+.flex{
+    flex: 1 1 auto;
+}
+
+.navbar-light .navbar-nav .nav-link
+{
+    color: var(--secondary-color);
+}
+
+.navbar-light .navbar-nav .nav-link.active-link
+{
+    color: #6ab7f2;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar-brand{
+    font-weight: bold;
+}
+
+img{
+    height: 50px;
+    width: auto;
+}
+
+a{
+    font-size: 15px;
+    
+}

@@ -1,0 +1,38 @@
+
+
+<div align="center">
+    <table class="table table-bordered">
+        <thead class="table-dark">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Course</th>
+                <th>Contact</th>
+                <th>Address</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody class="table-light">
+            <tr *ngFor="let d of data | paginate : {itemsPerPage:itemsPerPage,currentPage:p}">
+                <td>{{d.id}}</td>
+                <td>{{d.name}}</td>
+                <td>{{d.age}}</td>
+                <td>{{d.course}}</td>
+                <td>{{d.contact}}</td>
+                <td>{{d.address}}</td>
+                <td>
+            
+                    <!-- Button to trigger the modal -->
+        
+        
+          <button type="button" class="btn btn2 mx-4 btn-success  padding-right" data-bs-toggle="modal" data-bs-target="#requestModal" (click)="insert(d)">Accept 
+          </button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="mt-8 py-5 d-flex  justify-content-center">
+    <pagination-controls (pageChange) ="p=$event"></pagination-controls>
+    </div>
+

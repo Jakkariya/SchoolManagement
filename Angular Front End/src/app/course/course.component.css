@@ -1,0 +1,13 @@
+.banner{
+    
+    background-position: center bottom;
+    background-size: cover;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+img{
+    
+    height: 160px;
+}

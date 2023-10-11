@@ -1,0 +1,47 @@
+
+<div class="row">
+    <div class="col-6 col-lg-6 col-md-6   search">
+    
+      <input type="text" name="search" [(ngModel)]="searchText" placeholder="search">
+    
+  </div>
+  <div class="col-6  col-lg-6 col-md-6  insert">
+  
+      <button class="btn btn-primary align-right" class="btn btn2 mx-4 btn-success  padding-right" data-bs-toggle="modal" data-bs-target="#teacherinsertModal">New Record</button>
+  </div>
+    </div>
+
+<div align="center">
+    <table class="table table-bordered">
+        <thead class="table-dark">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Roll</th>
+                <th>Contact</th>
+                <th>Salary</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody class="table-light">
+            <tr *ngFor="let d of data | filters : searchText | paginate : {itemsPerPage:itemsPerPage,currentPage:p}">
+                <td>{{d.id}}</td>
+                <td>{{d.name}}</td>
+                <td>{{d.roll}}</td>
+                <td>{{d.contact}}</td>
+                <td>{{d.salary}}</td>
+                <td><button class="btn btn1 padding-left btn-danger" (click)="deleteItem(d.id)">Delete</button>
+            
+                    <!-- Button to trigger the modal -->
+        
+        
+          <button type="button" class="btn btn2 mx-4 btn-success  padding-right" data-bs-toggle="modal" data-bs-target="#teacherModal" (click)="updateItem(d)">Edit  
+          </button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="mt-8 py-5 d-flex  justify-content-center">
+    <pagination-controls (pageChange) ="p=$event"></pagination-controls>
+    </div>
+

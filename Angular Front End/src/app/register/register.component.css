@@ -1,0 +1,10 @@
+
+.banner{
+    background-image: url("../../assets/img/registerbanner.png");
+    height: 720px;
+    background-position: center bottom;
+    background-size: cover;
+
+    
+}
+

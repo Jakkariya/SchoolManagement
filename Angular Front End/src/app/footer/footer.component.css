@@ -1,0 +1,17 @@
+.footer{
+    overflow: hidden;
+    position: sticky;
+    top: 100%;
+    background-color: black;
+    padding: 20px 10px;
+
+}
+h4{
+    text-align: left;
+    color: white;
+    font-size: 20px;
+}
+p{
+    color: white;
+    font-size: 10px;
+}

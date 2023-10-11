@@ -1,0 +1,37 @@
+<button class="btn" (click)="back()" ><i class="fa fa-arrow-left" aria-hidden="true"></i>
+</button>
+
+<div class="modal fade" id="teacherinsertModal" tabindex="-1" aria-labelledby="studentModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="studentModalLabel">Insert New Record</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+<form #insertform="ngForm" (ngSubmit)="insertdata(insertform)">  
+    <label>Id : </label>
+    <input type="text" class="form-control"  id="id" name="id" #id (ngModel)="id" >
+    
+    <label>Teacher Name : </label>
+    <input type="text" class="form-control"  id="name" name="name" #name (ngModel)="name">
+    
+    <label>Roll : </label>
+    <input type="text" class="form-control"  id="roll" name="roll" #roll (ngModel)="roll">
+    
+        <label>CONTACT : </label>
+    <input type="number" class="form-control"  id="contact" name="contact" #contact (ngModel)="contact">
+    <br>
+
+    <label>Salary : </label>
+    <input type="number"class="form-control"   id="salary" name="salary" #salary (ngModel)="salary">
+    <br>
+
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+    <input type="submit" class="btn btn-info mx-2" value="insert">
+  </form>
+  </div>
+  </div>
+  </div>
+</div>

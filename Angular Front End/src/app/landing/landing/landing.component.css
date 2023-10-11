@@ -1,0 +1,51 @@
+.banner{
+    background-image: url("../../../assets/img/banner1.jpg");
+    height: 580px;
+    background-position: center bottom;
+    background-size: cover;
+}
+
+.login{
+    color: aqua;
+}
+
+.content {
+    margin-left: 20%;
+    margin-top: 10%;
+    position: absolute;
+    
+}
+@media screen and(min-width: 530px){
+    .content{
+        margin-top: 2%;
+        margin-left: 20%;
+    }
+
+}  
+
+
+
+
+h1{
+    margin: 0px;
+    color: #ffffff;
+}
+
+
+
+.content button{
+    font-size: 15px;
+    text-decoration: none;
+    background-color: aliceblue;
+    color:  #3c61f6;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor:pointer;
+    margin-left: 10vh;
+    margin-top: 5vh;
+}
+.content button:hover{
+    background-color:#6a86f1 ;
+    color: aliceblue;
+}
+

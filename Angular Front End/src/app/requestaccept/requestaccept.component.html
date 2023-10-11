@@ -1,0 +1,40 @@
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="requestModal" tabindex="-1" aria-labelledby="studentModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="studentModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form #updateform="ngForm" (ngSubmit)="updatedata(updateform)">  
+            <label>ROLL NO : </label>
+            <input type="text" class="form-control"  id="rollno" name="rollno" [(ngModel)]="student.rollno" disabled>
+            
+            <label>STUDENT NAME : </label>
+            <input type="text" class="form-control"  id="name" name="name" [(ngModel)]="student.name">
+            
+            <label>COURSE : </label>
+            <input type="text" class="form-control"  id="course" name="course" [(ngModel)]="student.course">
+            
+            <label>ADDRESS : </label>
+            <input type="text"class="form-control"   id="address" name="address" [(ngModel)]="student.address">
+            
+            <label>CONTACT : </label>
+            <input type="number" class="form-control"  id="contact" name="contact" [(ngModel)]="student.contact">
+            <br>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <input type="submit" class="btn btn-info mx-2" value="Update">
+          </form>
+          
+        </div>
+      
+      </div>
+    </div>
+  </div>
+  
+  
+  

@@ -1,0 +1,53 @@
+
+
+
+<content>
+
+    <div class="row">
+      <div class="col-6 col-lg-6 col-md-6   search">
+      
+        <input type="text" name="search" [(ngModel)]="searchText" placeholder="search">
+      
+    </div>
+    <div class="col-6  col-lg-6 col-md-6  insert">
+    
+        <button class="btn btn-primary align-right" class="btn btn2 mx-4 btn-success  padding-right" data-bs-toggle="modal" data-bs-target="#studentinsertModal">New Record</button>
+    </div>
+      </div>
+    
+    <div class="container">
+        <div class="row">
+          <div class="col-lg-3 mt-2 mb-2 col-md-4 cards" *ngFor="let d of data | filters : searchText | paginate : {itemsPerPage:itemsPerPage,currentPage:p}">
+            <div class="card" style="width: 12rem;">
+              <img src="https://as2.ftcdn.net/v2/jpg/00/65/77/27/1000_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg"
+                class="card-img-top rounded-circle" alt="Student Image">
+              <div class="card-body">
+                <h5 class="card-title">{{d.name}}</h5>
+                <p class="card-text" id="rollno" name="rollno">{{d.rollno}}</p>
+                <p class="card-text">Course: {{d.course}}</p>
+                <p class="card-text">Contact: {{d.contact}}</p>
+                <p class="card-text">Address: {{d.address}}</p>
+      
+                <button class="btn btn1 padding-left btn-danger" (click)="deleteItem(d.rollno)"><i class="fa-solid fa-trash-can"></i></button>
+                
+                <!-- Button to trigger the modal -->
+    
+    
+      <button type="button" class="btn btn2 mx-4 btn-success  padding-right" data-bs-toggle="modal" data-bs-target="#studentModal" (click)="updateItem(d)"><i class="far fa-edit"></i>  
+      </button>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+       
+      </div>
+      
+      <div class="mt-8 py-5 d-flex  justify-content-center">
+        <pagination-controls (pageChange) ="p=$event"></pagination-controls>
+        </div>
+      
+    
+    </content>
+    
+    

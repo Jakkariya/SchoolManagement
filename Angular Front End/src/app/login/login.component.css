@@ -1,0 +1,51 @@
+#container{
+    display: flex;
+    
+    align-items: left;
+    flex-direction: column;
+    margin-left: 20%;
+    margin-right: 65%;
+    padding-top: 150px;
+}
+
+
+h1{
+    color: #f9f2f2;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    margin-left: 50px;
+
+}
+
+input{
+    background-color:#53feff ;
+    color: #221f1f;
+    padding: 10px 20px;
+    border: 0px;
+    margin-bottom: 10px;
+    
+
+}
+
+button{
+    width: 220px;
+    text-align: center;
+    padding: 0px 20px;
+    background-color: #22acff;
+    color: aliceblue;
+    outline: none;
+    margin-top: 40px;
+    text-transform: uppercase;
+    cursor: pointer;
+
+}
+
+
+.banner{
+    background-image: url("../../assets/img/loginbanner1.jpg");
+    height: 750px;
+    background-position: center bottom;
+    background-size: cover;
+
+    
+}
